@@ -179,6 +179,12 @@ hr:last-child {
   background-color: unset;
   border: none;
   cursor: pointer;
+  position: relative;
+}
+.addPost img {
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
 }
 .postImage {
   padding: 20px;
@@ -232,7 +238,7 @@ hr:last-child {
 .cont2 .discoverContainer button {
   color: grey;
   background-color: white;
-  border: 1px solid grey;
+  border: 1px solid #80808040;;
   border-radius: 4px;
   padding: 15px;
   width: fit-content;

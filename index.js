@@ -24,25 +24,24 @@ document.addEventListener("scroll", function () {
 
   hasScrolled = true;
 });
-
 document.addEventListener("DOMContentLoaded", function () {
-  function toggleRandomElementOpacity() {
-    const elements = document.querySelectorAll("g[stroke-linecap='butt']");
-    if (elements.length > 0) {
-      const randomIndex = Math.floor(Math.random() * elements.length); // Scegli un elemento casuale
-      const randomElement = elements[randomIndex];
-
-      randomElement.style.opacity = 1; // Mostra l'elemento
-
-      setTimeout(() => {
-        randomElement.style.opacity = 0; // Nascondi l'elemento dopo un centesimo di secondo
-        setTimeout(toggleRandomElementOpacity, 50); // Ripeti il processo dopo 10 millisecondi (un centesimo di secondo)
-      }, 10); // Attendere 10 millisecondi (un centesimo di secondo)
-    }
-  }
-
-  toggleRandomElementOpacity(); // Avvia il ciclo
+    
+        function toggleRandomElementOpacity() {
+          const elements = document.querySelectorAll("g[stroke-linecap='butt']");
+          if (elements.length > 0) {
+            const randomIndex = Math.floor(Math.random() * elements.length);
+            const randomElement = elements[randomIndex];
+            randomElement.style.opacity = 1;
+            setTimeout(() => {
+              randomElement.style.opacity = 0;
+              setTimeout(toggleRandomElementOpacity, 50);
+            }, 10);
+          }
+        }
+        toggleRandomElementOpacity();
+    
 });
+
 const container1 = document.querySelector(".postContainer");
 const container2 = document.querySelector(".discoverContainer");
 const header = document.querySelector("header");
@@ -52,7 +51,7 @@ window.addEventListener("scroll", () => {
   console.log(container1Rect);
   const scrollPosition = window.scrollY;
 
-  if (scrollPosition >= container1Rect.top) {
+  if (container1Rect.top <= 50) {
     container2.style.position = "sticky";
     container2.style.top = header.offsetHeight + "px";
   } else {
