@@ -1,0 +1,261 @@
+body {
+}
+/* Header */
+header {
+  background-color: #ffc017;
+  padding: 20px 0;
+  font-family: "Spectral", serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid black;
+  transition: background-color 0.5s;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav div {
+  width: 30%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+li {
+  padding: 10px 15px;
+  /* border: 1px solid black; */
+  border-radius: 16px;
+  cursor: pointer;
+}
+nav ul li:last-child {
+  transition: background-color 0.5s;
+}
+
+/* Main */
+main {
+  margin-top: 77px;
+}
+main,
+section {
+  font-family: "Roboto", serif;
+}
+main section.first {
+  background-color: #ffc017;
+  display: flex;
+  justify-content: space-evenly;
+
+  border-bottom: 1px solid black;
+}
+.first .container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+h1 {
+  font-size: 106px;
+}
+.first .container1 p {
+  width: 65%;
+  line-height: normal;
+  font-size: 24px;
+}
+.first .container1 a {
+  font-size: 20px;
+  text-decoration: none;
+  padding: 8px 20px;
+
+  width: 213px;
+  text-align: center;
+}
+
+.second {
+  padding-top: 40px;
+  padding-bottom: 16px;
+}
+
+.second hr {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0;
+}
+hr:last-child {
+  margin-top: 30px;
+}
+
+.second h2::before {
+  content: url("../imgs/svg/trending.svg");
+  height: 30px;
+  display: inline-block;
+  margin-right: 15px;
+}
+.second h2 {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+}
+
+.trendingContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.trend {
+  width: calc(100% / 3);
+  margin: 8px 0;
+  display: flex;
+}
+
+.trend div:first-child {
+  font-size: 32px;
+  color: lightgrey;
+  margin: 0 10px;
+}
+
+.trendingContainer h2 {
+  margin-bottom: 8px;
+}
+.trend .info {
+  margin: 8px 0;
+  font-weight: 700;
+  line-height: 22px;
+}
+.trend img,
+.IP {
+  width: 20px;
+  border-radius: 9999px;
+  margin-right: 5px;
+}
+.trend .name,
+.readPost .name {
+  vertical-align: 4px;
+}
+
+.time .readTime::before,
+.date .readTime::before,
+.date .readTime::after {
+  content: " ";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  margin: 0 5px;
+  vertical-align: 4px;
+}
+
+.last .time .star::before {
+  content: url("../imgs/svg/star.svg");
+  margin-left: 5px;
+  vertical-align: middle;
+}
+.date img {
+  vertical-align: middle;
+}
+.about {
+  background-color: #d3d3d359;
+  padding: 10px;
+  border-radius: 9999px;
+}
+
+.post {
+  display: flex;
+  height: 180px;
+  margin: 40px 0;
+}
+.post .readPost {
+  width: 550px;
+}
+.post .addPost {
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+}
+.postImage {
+  padding: 20px;
+  height: 80%;
+}
+.second .cont1,
+.second .cont2 {
+  margin: 0 auto;
+  width: 80%;
+}
+.cont2 {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+.postContainer {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cont2 .discoverContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 30px;
+  width: 48%;
+  height: 400px;
+}
+.discover,
+.discoverContainer div:last-child {
+  margin: 25px auto;
+  width: 70%;
+}
+
+.discoverContainer h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.post .info h3 {
+  font-size: 26px;
+  font-weight: 600;
+}
+.post .info h3,
+.post .info .desc {
+  margin: 15px 0;
+}
+
+.cont2 .discoverContainer button {
+  color: grey;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 15px;
+  width: fit-content;
+  margin: 3px;
+  font-size: 16px;
+}
+.cont2 .discoverContainer ul {
+  list-style: none;
+}
+.cont2 .discoverContainer ul li {
+  color: grey;
+  display: inline-block;
+}
+
+.black {
+  background-color: #191919;
+  color: white;
+  border-radius: 50px;
+}
+.green {
+  background-color: #1a8917;
+}
+
+.scrolled {
+  background-color: white;
+}
